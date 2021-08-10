@@ -1,7 +1,9 @@
 import React from 'react';
+import { StyledCell } from './styles/StyledCell';
+import { TETROMINOS } from '../tetrominos';
 
 const Cell = ({ type }) => (
-  <div>cell</div>
-)
+  <StyledCell type={"J"} color={TETROMINOS[type].color} />
+);
 
-export default Cell;
+export default React.memo(Cell);
